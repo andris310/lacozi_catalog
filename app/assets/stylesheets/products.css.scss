@@ -1,0 +1,206 @@
+$Roboto: 'Roboto', sans-serif;
+$Blue: #418DFF;
+$Gray: #DADADA;
+
+body {
+  font-family: $Roboto;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  &:hover{
+    color: $Blue;
+  }
+}
+
+
+////// Front Page /////////
+
+#container {
+  position:absolute;
+  width: 1024px;
+  height: 730px;
+  border: 1px solid #EBEBEB;
+}
+
+h1#logo {
+  float: left;
+  width: 300px;
+  margin: 0 10px 0 26px;
+  font-size: 5em;
+  font-weight: 200;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+h1.category {
+  font-weight: 200;
+  color: $Blue;
+  float: left;
+  width: 300px;
+  margin-top: 57px;
+  margin-left: 80px;
+}
+
+#main-menu {
+  width: 450px;
+  position: relative;
+  float: right;
+}
+
+ul#main-menu-list {
+  list-style: none;
+  padding: 0;
+  li {
+    color: #FFF;
+    font-size: 1.8em;
+    font-family: $Roboto;
+    font-weight: 300;
+    padding: 26px;
+    background-color: $Gray;
+    margin-bottom: 5px;
+  }
+}
+
+
+#slider {
+  width: 960px;
+  height: 400px;
+  margin: auto;
+}
+
+//////  Product Show Page ////////
+
+#p-container {
+  border: 1px solid #dfdfdf;
+  overflow: auto;
+}
+
+h1 {
+  font-family: $Roboto;
+  font-size: 1.6em;
+}
+
+#p-image {
+  float: left;
+  padding: .5em;
+}
+
+///// PRODUCT DISPLAY PAGE //////
+
+
+.item-list {
+  list-style: none;
+  padding: 0;
+}
+
+.grid {
+  li {
+    float: left;
+    padding: 20px;
+  }
+}
+
+#product-data {
+  margin-left: 10px;
+  // border-top: 1px solid #E9E9E9;
+  float: left;
+  width: 839px;
+}
+
+#product-data {
+  h2 {
+    width: 500px;
+    height: 65px;
+    margin-left: 32px;
+    font-weight: 300;
+
+  }
+}
+
+.pic{
+  height: 450px;
+  width: 450px;
+  float: left;
+   img {
+    height: 450px;
+    width: 450px;
+    margin-left: 10px;
+  }
+}
+
+.description {
+  float: right;
+  width: 360px;
+  p {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+}
+
+#bottom-menu-div {
+  width: 480px;
+  height: 50px;
+  clear: both;
+  float: right;
+}
+
+#bottom-menu {
+  list-style: none;
+  padding: 0;
+  & li {
+    display: inline;
+    background-color: $Gray;
+    color: #FFF;
+  }
+}
+
+#bottom-menu {
+  position: absolute;
+  bottom: 0;
+  a li {
+    padding: 6px 15px;
+    font-size: 1.7em;
+    font-family: 'roboto';
+    font-weight: 200;
+  }
+}
+
+.list {
+  margin-top: -100px;
+  overflow: scroll;
+  height: 75%;
+  margin-left: 34px;
+  margin-right: 12px;
+  ul {
+    padding: 0;
+    margin-left: 2px;
+    li img {
+      box-shadow: 0px 1px 4px #E6E6E6;
+    }
+  }
+}
+
+///// SWIPE STYLES //////
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}
