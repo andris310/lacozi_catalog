@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lacozi</title>
+  <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <!-- <link rel="stylesheet" media="all and (orientation:portrait)" href="portrait.css"> -->
+  <!-- <link rel="stylesheet" media="all and (orientation:landscape)" href="landscape.css"> -->
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div id='container'>
+    <%= yield %>
+  </div>
+
+</body>
+  <script type="text/javascript">
+
+  </script>
+</html>
