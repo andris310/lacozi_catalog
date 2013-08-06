@@ -10,6 +10,7 @@ gem 'rails', '3.2.13'
 
 gem 'carrierwave'
 gem 'rmagick'
+gem 'figaro'
 gem 'fog'
 
 group :production do
