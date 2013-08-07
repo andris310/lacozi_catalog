@@ -63,6 +63,7 @@ function getItemDetails(itemId) {
       info.append($('<h2>' + r['name'] + '</h2>').fadeIn(500));
       info.append($('<div class="pic"><img src=' + r['picture']['url'] + '></div>').fadeIn(500));
       info.append($('<div class="description"><p>' + r['description'] + '</p></div>').fadeIn(500));
+      info.append($('<div class="code">' + r['code'] + '</div>').fadeIn(500));
     }
   });
 }
