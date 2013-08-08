@@ -209,3 +209,22 @@ h1 {
   width:100%;
   position: relative;
 }
+
+
+/////// BACK-END ////////
+
+input#product_name {
+  font-size: 1.5em;
+  width: 700px;
+}
+
+textarea#product_description {
+  font-size: 1.1em;
+  width: 700px;
+  height: 320px;
+}
+
+input#product_code {
+  font-size: 1.5em;
+  width: 200px;
+}
