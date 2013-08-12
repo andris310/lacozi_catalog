@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'fog'
+
 CarrierWave.configure do |config|
   config.fog_credentials = {
     :provider               => 'AWS',
