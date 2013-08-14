@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/joliss/jquery-ui-rails
+  revision: 61a5a520ba4ae3413d18101bc4b32584a5f50fae
+  specs:
+    jquery-ui-rails (4.0.4)
+      jquery-rails
+      railties (>= 3.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -68,7 +76,7 @@ GEM
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
-    jquery-rails (3.0.2)
+    jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.0)
@@ -147,7 +155,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   figaro
   fog
-  jquery-rails
+  jquery-ui-rails!
   pg
   pry
   rails (= 3.2.13)
