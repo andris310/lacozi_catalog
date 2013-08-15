@@ -145,8 +145,10 @@ h1 {
   float: right;
   width: 360px;
   p {
-    font-size: 1em;
+    font-family: $Roboto;
+    font-size: 1.16em;
     line-height: 1.5em;
+    font-weight: 300;
   }
 }
 
@@ -191,6 +193,14 @@ h1 {
       box-shadow: 0px 2px 5px #E6E6E6;
     }
   }
+}
+
+.code {
+  width: 125px;
+  height: 30px;
+  position: relative;
+  float: right;
+  margin-right: 235px;
 }
 
 ///// SWIPE STYLES //////
@@ -264,6 +274,7 @@ td.product_code{
 
 .category_id {
   text-align: center;
+  color: red;
 }
 
 .destroy_product a {
