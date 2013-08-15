@@ -1,3 +1,4 @@
+
 class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
@@ -16,7 +17,13 @@ class ProductsController < ApplicationController
   end
 
   def decorative_pillows
-    @pillows = Product.where(:category_id => [4, 5, 9, 8])
+    # @pillows = Product.where(:category_id => [4, 5, 9, 8])
+    @pillows = []
+    Product.all.each do |prod|
+      if prod.category.name == 'Decorative Pillows'
+        @pillows << prod
+      end
+    end
     respond_to do |format|
       format.html
       format.json { render json: @pillows }
@@ -25,8 +32,15 @@ class ProductsController < ApplicationController
 
 
   def duvet_sets
-    @duvet_sets = Product.where(:category_id => 1)
+    # @duvet_sets = Product.where(:category_id => 1)
     # @duvet_sets = Product.where(:category => 'duvet set')
+    @duvet_sets = []
+    Product.all.each do |prod|
+      if prod.category.name == 'Duvet Cover Sets'
+        @duvet_sets << prod
+      end
+    end
+
     respond_to do |format|
       format.html
       format.json { render json: @duvet_sets }
