@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
   end
 
   def decorative_pillows
-    @pillows = Product.where(:category_id => 1)
+    @pillows = Product.where(:category_id => [4, 5, 9, 8])
     respond_to do |format|
       format.html
       format.json { render json: @pillows }
