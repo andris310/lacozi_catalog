@@ -19,7 +19,7 @@ a {
 
 #container {
   position:absolute;
-  width: 1024px;
+  width: 1016px;
   height: 730px;
   border: 1px solid #EBEBEB;
 }
@@ -143,7 +143,8 @@ h1 {
 
 .description {
   float: right;
-  width: 360px;
+  margin-right: 5px;
+  width: 355px;
   p {
     font-family: $Roboto;
     font-size: 1.16em;
