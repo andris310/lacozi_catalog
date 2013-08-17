@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
     # @pillows = Product.where(:category_id => [4, 5, 9, 8])
     @pillows = []
     Product.all.each do |prod|
-      if prod.category.name == 'Decorative Pillows'
+      if prod.category.name.downcase.include? 'pillow'
         @pillows << prod
       end
     end

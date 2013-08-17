@@ -70,8 +70,10 @@ function getItemDetails(itemId) {
 
 
 $(document).ready(function() {
-  $('#dec-pillows').load(getItems('/decorative-pillows.json', '#dec-pillows'));
-  $('#duvet-sets').load(getItems('/duvet-sets.json', '#duvet-sets'));
+  var decPillows = $('#dec-pillows');
+  var duvetSets = $('#duvet-sets');
+  decPillows.load(getItems('/decorative-pillows.json', decPillows));
+  duvetSets.load(getItems('/duvet-sets.json', duvetSets));
 
   $('.list').on('click', 'li', function() {
     var list = $('.list');
