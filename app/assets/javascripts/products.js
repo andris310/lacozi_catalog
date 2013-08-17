@@ -87,7 +87,7 @@ $(document).ready(function() {
               'float': 'right',
              'height': '90%',
         'margin-left': '0px',
-         'margin-top': '-100px'
+         'margin-top': '-105px'
     });
 
 
