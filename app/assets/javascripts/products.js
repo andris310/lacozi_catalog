@@ -72,8 +72,8 @@ function getItemDetails(itemId) {
 $(document).ready(function() {
   var decPillows = $('#dec-pillows');
   var duvetSets = $('#duvet-sets');
-  var babyBlankets = $('#baby-blankets');
-  var napkins = $('#napkins');
+  var babyBlankets = $('#baby-blanket-list');
+  var napkins = $('#napkin-list');
 
   decPillows.load(getItems('/decorative-pillows.json', decPillows));
   duvetSets.load(getItems('/duvet-sets.json', duvetSets));
