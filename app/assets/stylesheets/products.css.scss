@@ -97,6 +97,7 @@ h1 {
 
 
 .item-list {
+  -webkit-overflow-scrolling: touch;
   list-style: none;
   padding: 0;
 }
