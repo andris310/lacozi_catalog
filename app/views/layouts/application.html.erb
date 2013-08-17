@@ -6,10 +6,14 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <!-- <link rel="stylesheet" media="all and (orientation:portrait)" href="portrait.css"> -->
-  <!-- <link rel="stylesheet" media="all and (orientation:landscape)" href="landscape.css"> -->
-
   <%= csrf_meta_tags %>
+  <script type="text/javascript">
+var myScroll;
+function loaded() {
+  myScroll = new iScroll('wrapper');
+}
+document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
 </head>
 <body>
 
