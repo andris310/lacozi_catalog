@@ -19,7 +19,7 @@ a {
 
 #container {
   position:absolute;
-  width: 1016px;
+  width: 1010px;
   height: 730px;
   border: 1px solid #EBEBEB;
 }
@@ -49,13 +49,20 @@ h1.category {
   margin-left: 80px;
 }
 
-#main-menu {
-  width: 450px;
+#main-menu-right {
+  width: 430px;
   position: relative;
   float: right;
 }
 
-ul#main-menu-list {
+#main-menu-left {
+  margin-left: -10px;
+  width: 430px;
+  position: relative;
+  float: left;
+}
+
+ul#main-menu-list-right {
   list-style: none;
   padding: 0;
   li {
@@ -69,6 +76,20 @@ ul#main-menu-list {
   }
 }
 
+ul#main-menu-list-left {
+  list-style: none;
+  padding: 0;
+  li {
+    text-align: right;
+    color: #FFF;
+    font-size: 1.8em;
+    font-family: $Roboto;
+    font-weight: 300;
+    padding: 26px;
+    background-color: $Gray;
+    margin-bottom: 5px;
+  }
+}
 
 #slider {
   width: 960px;
