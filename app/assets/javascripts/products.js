@@ -72,8 +72,13 @@ function getItemDetails(itemId) {
 $(document).ready(function() {
   var decPillows = $('#dec-pillows');
   var duvetSets = $('#duvet-sets');
+  var babyBlankets = $('#baby-blankets');
+  var napkins = $('#napkins');
+
   decPillows.load(getItems('/decorative-pillows.json', decPillows));
   duvetSets.load(getItems('/duvet-sets.json', duvetSets));
+  babyBlankets.load(getItems('/baby-blankets.json', babyBlankets));
+  napkins.load(getItems('/napkins.json', napkins));
 
   $('.list').on('click', 'li', function() {
     var list = $('.list');
