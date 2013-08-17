@@ -81,7 +81,8 @@ $(document).ready(function() {
               'width': '154px',
               'float': 'right',
              'height': '90%',
-        'margin-left': '0px'
+        'margin-left': '0px',
+         'margin-top': '-100px'
     });
 
 
