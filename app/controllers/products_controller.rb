@@ -47,6 +47,34 @@ class ProductsController < ApplicationController
     end
   end
 
+  def napkins
+    @napkins = []
+    Product.all.each do |prod|
+      if prod.category.name == 'Napkins'
+        @napkins << prod
+      end
+    end
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @napkins }
+    end
+  end
+
+  def baby_blankets
+    @baby_blankets = []
+    Product.all.each do |prod|
+      if prod.category.name == 'Baby Blankets'
+        @baby_blankets << prod
+      end
+    end
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @baby_blankets }
+    end
+  end
+
   def details
     @details = Product.where(:id => params[:q])
     respond_to do |format|
