@@ -22,7 +22,9 @@
   <script type="text/javascript">
 var myScroll;
 function loaded() {
-  myScroll = new iScroll('wrapper');
+  myScroll = new iScroll('wrapper', {
+    checkDOMChanges: true
+  });
 }
 document.addEventListener('DOMContentLoaded', loaded, false);
 </script>
