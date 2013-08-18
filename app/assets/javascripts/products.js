@@ -97,9 +97,9 @@ $(document).ready(function() {
     getItemDetails(itemId);
   });
 
-    myScroll = new iScroll('wrapper', {
-      checkDOMChanges: true
-    });
+  myScroll = new iScroll('wrapper', {
+    checkDOMChanges: true
+  });
 
-document.addEventListener('DOMContentLoaded', loaded, false);
+  document.addEventListener('DOMContentLoaded', loaded, false);
 });
