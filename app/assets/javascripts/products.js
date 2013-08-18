@@ -72,6 +72,7 @@ function slider() {
         myAppShot = new iScroll('wrapper', {
         checkDOMChanges: true
      });
+  document.addEventListener('DOMContentLoaded', loaded, false);
 }
 
 
@@ -108,5 +109,5 @@ $(document).ready(function() {
       //   checkDOMChanges: true
       // });
 
-document.addEventListener('DOMContentLoaded', loaded, false);
+// document.addEventListener('DOMContentLoaded', loaded, false);
 });
