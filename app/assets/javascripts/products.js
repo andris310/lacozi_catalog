@@ -70,10 +70,6 @@ function getItemDetails(itemId) {
 
 function slider() {
         myAppShot = new iScroll('wrapper', {
-        snap: true,
-        momentum: false,
-        hScrollbar: true,
-        vScrollbar: false,
         checkDOMChanges: true
      });
 }
