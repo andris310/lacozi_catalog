@@ -1,37 +1,3 @@
-// getItems = (link, cssid) ->
-//   $.ajax
-//     url: link
-//     type: "get"
-//     dataType: "json"
-//     success: (results) ->
-//       list = $(cssid)
-//       $(results).each (index, result) ->
-//         item = $("<li><img src='" + result["picture"]["thumb"]["url"] + "'></li>")
-//         list.append item
-//         item.attr('item_id', result["id"])
-
-
-// $(document).ready ->
-//   $('#dec-pillows').load(getItems('/decorative-pillows.json', '#dec-pillows'))
-//   $('#duvet-sets').load(getItems('/duvet-sets.json', '#duvet-sets'))
-
-
-  // $('.list').on('click', 'li', ->
-  //   info = $('#product-data')
-  //   li = $(this)
-  //   itemId = li.attr('item_id')
-  //   info.html('')
-  //   $.ajax
-  //     url: '/product-details.json'
-  //     data: q: info
-  //     debugger
-  //     type: 'get'
-  //     dataType: 'json'
-  //     success: (result) ->
-  //       info.append('some text here')
-  //       console.log(result)
-  //   )
-
 var myScroll;
 
 
@@ -69,10 +35,13 @@ function getItemDetails(itemId) {
 }
 
 function slider() {
-        myAppShot = new iScroll('wrapper', {
+  setTimeout(function() {
+    myAppShot = new iScroll('wrapper', {
         checkDOMChanges: true
      });
-  document.addEventListener('DOMContentLoaded', loaded, false);
+  }, 100);
+
+  document.addEventListener('DOMContentLoaded', slider, false);
 }
 
 
@@ -102,12 +71,6 @@ $(document).ready(function() {
     var li = $(this);
     var itemId = li.attr('item_id');
     getItemDetails(itemId);
+    slider();
   });
-
-  slider();
-      // myScroll = new iScroll('wrapper', {
-      //   checkDOMChanges: true
-      // });
-
-// document.addEventListener('DOMContentLoaded', loaded, false);
 });
