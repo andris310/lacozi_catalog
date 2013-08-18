@@ -49,7 +49,6 @@ function getItems(link, cssid) {
       });
     }
   });
-  slider();
 }
 
 function getItemDetails(itemId) {
