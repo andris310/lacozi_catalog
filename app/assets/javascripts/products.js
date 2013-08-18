@@ -49,6 +49,7 @@ function getItems(link, cssid) {
       });
     }
   });
+  slider();
 }
 
 function getItemDetails(itemId) {
@@ -82,9 +83,7 @@ $(document).ready(function() {
   var babyBlankets = $('#baby-blanket-list');
   var napkins = $('#napkin-list');
 
-  decPillows.load(getItems('/decorative-pillows.json', decPillows, function() {
-    slider();
-  }));
+  decPillows.load(getItems('/decorative-pillows.json', decPillows));
   duvetSets.load(getItems('/duvet-sets.json', duvetSets));
   babyBlankets.load(getItems('/baby-blankets.json', babyBlankets));
   napkins.load(getItems('/napkins.json', napkins));
