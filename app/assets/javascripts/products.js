@@ -97,10 +97,9 @@ $(document).ready(function() {
     getItemDetails(itemId);
   });
 
-    function loaded() {
-      myScroll = new iScroll('wrapper', {
-        checkDOMChanges: true
-      });
-    }
+    myScroll = new iScroll('wrapper', {
+      checkDOMChanges: true
+    });
+
 document.addEventListener('DOMContentLoaded', loaded, false);
 });
