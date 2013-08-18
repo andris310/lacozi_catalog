@@ -49,9 +49,6 @@ function getItems(link, cssid) {
       });
     }
   });
-  myScroll = new iScroll('wrapper', {
-      checkDOMChanges: true
-    });
 }
 
 function getItemDetails(itemId) {
@@ -100,9 +97,10 @@ $(document).ready(function() {
     getItemDetails(itemId);
   });
 
-  myScroll = new iScroll('wrapper', {
-    checkDOMChanges: true
-  });
-
-  document.addEventListener('DOMContentLoaded', loaded, false);
+    function loaded() {
+      myScroll = new iScroll('wrapper', {
+        checkDOMChanges: true
+      });
+    }
+document.addEventListener('DOMContentLoaded', loaded, false);
 });
