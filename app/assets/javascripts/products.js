@@ -68,6 +68,16 @@ function getItemDetails(itemId) {
   });
 }
 
+function slider() {
+        myAppShot = new iScroll('wrapper', {
+        snap: true,
+        momentum: false,
+        hScrollbar: true,
+        vScrollbar: false,
+        checkDOMChanges: true
+     });
+}
+
 
 $(document).ready(function() {
   var decPillows = $('#dec-pillows');
@@ -97,9 +107,10 @@ $(document).ready(function() {
     getItemDetails(itemId);
   });
 
-      myScroll = new iScroll('wrapper', {
-        checkDOMChanges: true
-      });
+  slider();
+      // myScroll = new iScroll('wrapper', {
+      //   checkDOMChanges: true
+      // });
 
 document.addEventListener('DOMContentLoaded', loaded, false);
 });
