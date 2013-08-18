@@ -32,7 +32,7 @@
   //       console.log(result)
   //   )
 
-
+var myScroll;
 
 
 function getItems(link, cssid) {
@@ -96,4 +96,11 @@ $(document).ready(function() {
     var itemId = li.attr('item_id');
     getItemDetails(itemId);
   });
+
+    function loaded() {
+      myScroll = new iScroll('wrapper', {
+        checkDOMChanges: true
+      });
+    }
+document.addEventListener('DOMContentLoaded', loaded, false);
 });
