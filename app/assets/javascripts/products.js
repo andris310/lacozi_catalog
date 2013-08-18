@@ -47,11 +47,11 @@ function getItems(link, cssid) {
         list.append(item.fadeIn(500));
         item.attr('item_id', result["id"]);
       });
-    },
-    myScroll = new iScroll('wrapper', {
+    }
+  });
+  myScroll = new iScroll('wrapper', {
       checkDOMChanges: true
     });
-  });
 }
 
 function getItemDetails(itemId) {
