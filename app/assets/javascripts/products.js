@@ -51,7 +51,9 @@ $(document).ready(function() {
   var babyBlankets = $('#baby-blanket-list');
   var napkins = $('#napkin-list');
 
-  decPillows.load(getItems('/decorative-pillows.json', decPillows));
+  decPillows.load(getItems('/decorative-pillows.json', decPillows), function() {
+    slider();
+  });
   duvetSets.load(getItems('/duvet-sets.json', duvetSets));
   babyBlankets.load(getItems('/baby-blankets.json', babyBlankets));
   napkins.load(getItems('/napkins.json', napkins));
