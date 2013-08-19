@@ -14,6 +14,8 @@ function getItems(link, cssid) {
       });
     }
   });
+  console.log('got items');
+  console.log(window.location.pathname);
 }
 
 function getItemDetails(itemId) {
@@ -31,6 +33,7 @@ function getItemDetails(itemId) {
       info.append($('<div class="code">' + r['code'] + '</div>').fadeIn(500));
     }
   });
+  console.log('details loaded');
 }
 
 function slider() {
@@ -41,6 +44,7 @@ function slider() {
   }, 100);
 
   document.addEventListener('DOMContentLoaded', slider, false);
+  console.log('scroller');
 }
 
 
@@ -50,25 +54,42 @@ $(document).ready(function() {
   var babyBlankets = $('#baby-blanket-list');
   var napkins = $('#napkin-list');
 
-  decPillows.load(getItems('/decorative-pillows.json', decPillows));
-  duvetSets.load(getItems('/duvet-sets.json', duvetSets));
-  babyBlankets.load(getItems('/baby-blankets.json', babyBlankets));
-  napkins.load(getItems('/napkins.json', napkins));
+  var pathname = window.location.pathname;
+  if (pathname === '/decorative-pillows'){
+    decPillows.load(getItems('/decorative-pillows.json', decPillows));
+  }
+
+  if (pathname === '/baby-blankets'){
+    babyBlankets.load(getItems('/baby-blankets.json', babyBlankets));
+  }
+
+  if (pathname === '/duvet-sets'){
+    duvetSets.load(getItems('/duvet-sets.json', duvetSets));
+  }
+
+  if (pathname === '/napkins'){
+    napkins.load(getItems('/napkins.json', napkins));
+  }
+
 
   $('.list').on('click', 'li', function() {
     var list = $('.list');
     list.css({
-              'width': '154px',
+              'width': '174px',
               'float': 'right',
              'height': '90%',
         'margin-left': '0px',
          'margin-top': '-105px'
     });
 
-    $('.item-list').removeClass('grid');
+
+    if ($('ul').hasClass('grid')) {
+      $(this).removeClass('grid');
+      console.log('remove grid');
+    }
+
     var li = $(this);
     var itemId = li.attr('item_id');
     getItemDetails(itemId);
-    // slider();
   });
 });
