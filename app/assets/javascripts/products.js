@@ -59,16 +59,13 @@ $(document).ready(function() {
   if (pathname === '/decorative-pillows'){
     decPillows.load(getItems('/decorative-pillows.json', decPillows));
   }
-
-  if (pathname === '/baby-blankets'){
+  else if (pathname === '/baby-blankets'){
     babyBlankets.load(getItems('/baby-blankets.json', babyBlankets));
   }
-
-  if (pathname === '/duvet-sets'){
+  else if (pathname === '/duvet-sets'){
     duvetSets.load(getItems('/duvet-sets.json', duvetSets));
   }
-
-  if (pathname === '/napkins'){
+  else if (pathname === '/napkins'){
     napkins.load(getItems('/napkins.json', napkins));
   }
 
