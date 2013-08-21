@@ -1,4 +1,3 @@
-var myScroll;
 
 function getItems(link, cssid) {
   $.ajax({
@@ -36,16 +35,16 @@ function getItemDetails(itemId) {
   console.log('details loaded');
 }
 
-function slider() {
-  setTimeout(function() {
-    myAppShot = new iScroll('wrapper', {
-        checkDOMChanges: true
-     });
-  }, 100);
+// function scroller() {
+//   setTimeout(function() {
+//     myAppShot = new iScroll('wrapper', {
+//         checkDOMChanges: true
+//      });
+//   }, 100);
 
-  document.addEventListener('DOMContentLoaded', slider, false);
-  console.log('scroller');
-}
+//   document.addEventListener('DOMContentLoaded', scroller, false);
+//   console.log('scroller');
+// }
 
 
 $(document).ready(function() {
@@ -53,6 +52,8 @@ $(document).ready(function() {
   var duvetSets = $('#duvet-sets');
   var babyBlankets = $('#baby-blanket-list');
   var napkins = $('#napkin-list');
+  var list = $('.list');
+
 
   var pathname = window.location.pathname;
   if (pathname === '/decorative-pillows'){
@@ -71,9 +72,7 @@ $(document).ready(function() {
     napkins.load(getItems('/napkins.json', napkins));
   }
 
-
-  $('.list').on('click', 'li', function() {
-    var list = $('.list');
+    list.on('click', 'li', function() {
     list.css({
               'width': '174px',
               'float': 'right',
@@ -81,12 +80,6 @@ $(document).ready(function() {
         'margin-left': '0px',
          'margin-top': '-105px'
     });
-
-
-    if ($('ul').hasClass('grid')) {
-      $(this).removeClass('grid');
-      console.log('remove grid');
-    }
 
     var li = $(this);
     var itemId = li.attr('item_id');
