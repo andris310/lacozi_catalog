@@ -53,6 +53,7 @@ $(document).ready(function() {
   var babyBlankets = $('#baby-blanket-list');
   var napkins = $('#napkin-list');
   var list = $('.list');
+  var pillows = $('li#pillows');
 
 
   var pathname = window.location.pathname;
@@ -78,8 +79,16 @@ $(document).ready(function() {
          'margin-top': '-105px'
     });
 
+    $('.grid li').css({
+            'padding': '10px'
+    });
+
     var li = $(this);
     var itemId = li.attr('item_id');
     getItemDetails(itemId);
   });
+
+    pillows.on('click', function() {
+
+    });
 });
