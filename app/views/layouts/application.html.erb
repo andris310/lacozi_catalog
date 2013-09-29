@@ -9,15 +9,18 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <script type="text/javascript">
+
     var myScroll;
-    setTimeout(function () {
-      function loaded() {
-          myScroll = new iScroll('wrapper', {
-            checkDOMChanges: true
-          });
-          }
-        }, 200);
-    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    function loaded() {
+      setTimeout(function () {
+        myScroll = new iScroll('wrapper');
+      }, 100);
+    }
+
+    document.addEventListener('touchmove', function (e) {
+      e.preventDefault();
+    }, false);
+
     window.addEventListener('load', loaded, false);
   </script>
 </head>
