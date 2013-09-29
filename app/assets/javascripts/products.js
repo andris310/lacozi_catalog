@@ -92,6 +92,6 @@ $(document).ready(function() {
 
 
     pillows.on('click', function() {
-      subItems.slideToggle();
+      subItems.slideToggle(300);
     });
 });
