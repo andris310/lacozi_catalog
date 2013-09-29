@@ -54,7 +54,9 @@ $(document).ready(function() {
   var napkins = $('#napkin-list');
   var list = $('.list');
   var pillows = $('li#pillows');
+  var subItems = $('#sub-items');
 
+  subItems.hide();
 
   var pathname = window.location.pathname;
   if (pathname === '/decorative-pillows'){
@@ -88,7 +90,8 @@ $(document).ready(function() {
     getItemDetails(itemId);
   });
 
-    pillows.on('click', function() {
 
+    pillows.on('click', function() {
+      subItems.slideToggle();
     });
 });
