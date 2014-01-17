@@ -1,5 +1,8 @@
 LacoziWh::Application.routes.draw do
 
+  resources :subcategories
+
+
   resources :categories
 
 
