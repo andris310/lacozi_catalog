@@ -29,8 +29,13 @@
   </div>
 
   <div class="field">
-    Category Id:<br />
-    <%= f.select :category_id, @options %>
+    Category:<br />
+    <%= f.select :category_id, @cat %>
+  </div>
+
+  <div class="field">
+    SubCategory:<br />
+    <%= f.select :subcategory_id, @subcat %>
   </div>
 
   <div class="actions">
