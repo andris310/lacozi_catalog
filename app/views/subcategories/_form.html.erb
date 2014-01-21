@@ -15,6 +15,12 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+
+  <div class="field">
+    Category:<br />
+    <%= f.select :category_id, @cat, prompt: 'Select' %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

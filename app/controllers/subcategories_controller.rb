@@ -26,6 +26,10 @@ class SubcategoriesController < ApplicationController
   def new
     @subcategory = Subcategory.new
 
+    @cat = Category.all.collect do |c|
+      [c.name, c.id]
+    end
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @subcategory }
@@ -35,6 +39,9 @@ class SubcategoriesController < ApplicationController
   # GET /subcategories/1/edit
   def edit
     @subcategory = Subcategory.find(params[:id])
+    @cat = Category.all.collect do |c|
+      [c.name, c.id]
+    end
   end
 
   # POST /subcategories
