@@ -17,8 +17,12 @@ class ProductsController < ApplicationController
   end
 
   def decorative_pillows
-    @pillows = Product.where(category_id: 2)
-
+    @pillows = []
+    Product.all.each do |prod|
+      if prod.category.name.downcase.include? 'pillow'
+        @pillows << prod
+      end
+    end
     respond_to do |format|
       format.html
       format.json { render json: @pillows }
