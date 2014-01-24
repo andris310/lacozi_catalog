@@ -14,14 +14,6 @@ a {
   }
 }
 
-/*#admin-menu {
-  ul {
-    width: 500px;
-    list-style: none;
-    padding-left: 10px;
-  }
-}*/
-
 ////// Front Page /////////
 
 #container {
@@ -276,7 +268,7 @@ input#product_name {
 textarea#product_description {
   font-size: 1.1em;
   width: 700px;
-  height: 320px;
+  height: 190fpx;
 }
 
 input#product_code {
@@ -310,7 +302,12 @@ table#product_table td {
 }
 
 .product_description {
+  width: 350px;
   padding: 10px;
+}
+
+.subcat {
+  color: #FF8F00;
 }
 
 td.product_code{
@@ -335,7 +332,7 @@ td.product_code{
 
 #new_product {
   position: absolute;
-  top: 13px;
+  top: 50px;
   font-size: 1.3em;
   padding: 6px;
   background: #EEE;
