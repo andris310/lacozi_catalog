@@ -1,0 +1,19 @@
+#admin-menu {
+  ul {
+    width: 500px;
+    list-style: none;
+    padding-left: 10px;
+
+    li {
+    	display: inline;
+    	color: gray;
+    	padding: 3px 10px;
+
+    	a {
+    		&:hover {
+    			color: blue;
+    		}
+    	}
+    }
+  }
+}
