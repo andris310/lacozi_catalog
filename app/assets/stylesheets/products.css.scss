@@ -67,6 +67,12 @@ h1.category {
   float: left;
 }
 
+#wrapper {
+  ul {
+    overflow: auto;
+  }
+}
+
 .gray-menu ul {
   list-style: none;
   padding: 0;
