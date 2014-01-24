@@ -30,12 +30,12 @@
 
   <div class="field">
     Category:<br />
-    <%= f.select :category_id, @cat %>
+    <%= f.select :category_id, @cat, :prompt=> 'Select' %>
   </div>
 
   <div class="field">
     SubCategory:<br />
-    <%= f.select :subcategory_id, @subcat %>
+    <%= f.select :subcategory_id, @subcat, :prompt => 'Select' %>
   </div>
 
   <div class="actions">
