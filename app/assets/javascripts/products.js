@@ -1,3 +1,7 @@
+var myScroll;
+function loaded() {
+    myScroll = new IScroll('#wrapper');
+}
 
 function getItems(link, cssid) {
   $.ajax({
@@ -11,10 +15,8 @@ function getItems(link, cssid) {
         list.append(item.fadeIn(500));
         item.attr('item_id', result["id"]);
       });
-    }
+    },
   });
-  console.log('got items');
-  console.log(window.location.pathname);
 }
 
 function getItemDetails(itemId) {
@@ -35,18 +37,6 @@ function getItemDetails(itemId) {
   console.log('details loaded');
 }
 
-// function scroller() {
-//   setTimeout(function() {
-//     myAppShot = new iScroll('wrapper', {
-//         checkDOMChanges: true
-//      });
-//   }, 100);
-
-//   document.addEventListener('DOMContentLoaded', scroller, false);
-//   console.log('scroller');
-// }
-
-
 $(document).ready(function() {
   var decPillows = $('#dec-pillows');
   var duvetSets = $('#duvet-sets');
@@ -59,8 +49,8 @@ $(document).ready(function() {
   subItems.hide();
 
   var pathname = window.location.pathname;
-  if (pathname === '/decorative-pillows'){
-    decPillows.load(getItems('/decorative-pillows.json', decPillows));
+  if (pathname === '/pillows'){
+    decPillows.load(getItems('/pillows.json', decPillows));
   }
   else if (pathname === '/baby-blankets'){
     babyBlankets.load(getItems('/baby-blankets.json', babyBlankets));
