@@ -17,13 +17,8 @@ class ProductsController < ApplicationController
   end
 
   def decorative_pillows
-    @pillows = Product.all
-    # @pillows = []
-    # Product.all.each do |prod|
-    #   if prod.category.name.downcase.include? 'pillow'
-    #     @pillows << prod
-    #   end
-    # end
+    @pillows = Product.where(category_id: 2)
+
     respond_to do |format|
       format.html
       format.json { render json: @pillows }
@@ -36,7 +31,7 @@ class ProductsController < ApplicationController
     # @duvet_sets = Product.where(:category => 'duvet set')
     @duvet_sets = []
     Product.all.each do |prod|
-      if prod.category.name == 'Duvet Cover Sets'
+      if prod.category.name == 'Bedding'
         @duvet_sets << prod
       end
     end

@@ -17,7 +17,6 @@ function getItems(link, cssid) {
       });
     },
   });
-  loaded();
 }
 
 function getItemDetails(itemId) {
@@ -50,8 +49,8 @@ $(document).ready(function() {
   subItems.hide();
 
   var pathname = window.location.pathname;
-  if (pathname === '/decorative-pillows'){
-    decPillows.load(getItems('/decorative-pillows.json', decPillows));
+  if (pathname === '/pillows'){
+    decPillows.load(getItems('/pillows.json', decPillows));
   }
   else if (pathname === '/baby-blankets'){
     babyBlankets.load(getItems('/baby-blankets.json', babyBlankets));
