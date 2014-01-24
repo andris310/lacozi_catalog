@@ -9,22 +9,13 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <script type="text/javascript">
-
     var myScroll;
     function loaded() {
-      setTimeout(function () {
-        myScroll = new iScroll('wrapper');
-      }, 100);
+        myScroll = new IScroll('#wrapper');
     }
-
-    document.addEventListener('touchmove', function (e) {
-      e.preventDefault();
-    }, false);
-
-    window.addEventListener('load', loaded, false);
   </script>
 </head>
-<body>
+<body onload="loaded()">
 
   <div id='container'>
     <%= yield %>

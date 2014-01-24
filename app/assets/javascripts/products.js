@@ -1,3 +1,7 @@
+var myScroll;
+function loaded() {
+    myScroll = new IScroll('#wrapper');
+}
 
 function getItems(link, cssid) {
   $.ajax({
@@ -11,10 +15,9 @@ function getItems(link, cssid) {
         list.append(item.fadeIn(500));
         item.attr('item_id', result["id"]);
       });
-    }
+    },
   });
-  console.log('got items');
-  console.log(window.location.pathname);
+  loaded();
 }
 
 function getItemDetails(itemId) {
@@ -34,18 +37,6 @@ function getItemDetails(itemId) {
   });
   console.log('details loaded');
 }
-
-// function scroller() {
-//   setTimeout(function() {
-//     myAppShot = new iScroll('wrapper', {
-//         checkDOMChanges: true
-//      });
-//   }, 100);
-
-//   document.addEventListener('DOMContentLoaded', scroller, false);
-//   console.log('scroller');
-// }
-
 
 $(document).ready(function() {
   var decPillows = $('#dec-pillows');

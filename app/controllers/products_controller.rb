@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   # GET /products.json
 
   def home
-
+    @pillow_subcat = Subcategory.where(category_id: 2)
   end
 
   def index

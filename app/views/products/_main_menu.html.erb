@@ -4,7 +4,9 @@
       <div id='sub-items' class="gray-menu">
         <ul id='sub-pillows'>
           <a href="/decorative-pillows"><li>ALL</li></a>
-          
+          <% @pillow_subcat.each do |s| %>
+            <li><%= s.name %></li>
+          <% end %>
         </ul>
       </div>
     </div>
