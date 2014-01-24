@@ -23,7 +23,11 @@
     <td><%= image_tag product.picture_url(:thumb) if product.picture? %></td>
     <td class='product_description'><%= product.description %></td>
     <td class='product_code'><%= product.code %></td>
-    <td class='category_id'><%= product.category.name %></td>
+    <td class='category_id'>
+      <% if product.category %>
+        <%= product.category.name %>
+      <% end %>
+    </td>
     <td class='subcat'>
       <% if product.subcategory %>
         <%= product.subcategory.name %>
