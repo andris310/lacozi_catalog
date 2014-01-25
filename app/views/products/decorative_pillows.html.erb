@@ -10,7 +10,9 @@
 
 <div class='list' id='wrapper'>
   <ul id='dec-pillows' class='item-list grid'>
-
+    <% @pillows.each do |p| %>
+      <li><img src=<%= p.picture.thumb.url %>></li>
+    <% end %>
   </ul>
 </div>
 
