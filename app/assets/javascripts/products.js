@@ -1,7 +1,3 @@
-var myScroll;
-function loaded() {
-    myScroll = new IScroll('#wrapper');
-}
 
 function getItems(link, cssid) {
   $.ajax({
@@ -15,8 +11,11 @@ function getItems(link, cssid) {
         list.append(item.fadeIn(500));
         item.attr('item_id', result["id"]);
       });
-    },
+    }
   });
+  setTimeout(function() {
+    loaded();
+  }, 1000)
 }
 
 function getItemDetails(itemId) {
